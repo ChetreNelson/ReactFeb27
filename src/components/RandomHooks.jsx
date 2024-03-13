@@ -34,7 +34,7 @@ const RandomHooks = () => {
       <div className="bg-white rounded-lg p-8 shadow-lg">
         {/* Input range slider to specify the length of the password */}
         <input
-          className="w-full mb-4 px-4 py-2 border border-gray-300 rounded-md"
+          className="w-auto mb-4 px-4 py-2 border border-gray-300 rounded-md"
           type="text"
           value={pass}
           placeholder="Your password"

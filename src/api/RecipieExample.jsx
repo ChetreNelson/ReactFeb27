@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import RecipeAPI from "./RecipeApi";
 import { Link } from "react-router-dom";
-const { API } = RecipeAPI;
+
 const RecipieExample = () => {
+  const { API } = RecipeAPI;
   const [dat, setDat] = useState([]);
 
   const getCategories = async () => {
     try {
+      
       const response = await API.get();
       setDat(response.data.categories);
     } catch (e) {
@@ -39,16 +41,6 @@ const RecipieExample = () => {
           </div>
         ))}
       </div>
-
-      {/* <div>
-        {dab !== null &&
-          dab.map((byCategory) => (
-            <div key={byCategory.idMeal}>
-              <p>{byCategory.idMeal}</p>
-              <p>{byCategory.strMeal}</p>
-            </div>
-          ))}
-      </div> */}
     </div>
   );
 };

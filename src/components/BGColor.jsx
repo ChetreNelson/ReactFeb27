@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 
 const BGColor = () => {
-  const [color, setColor] = useState("violet");
+  const [color, setColor] = useState("black");
+  const handleCLick = (col) => {
+    setColor(col);
+  };
+
   return (
     <div className="w-full h-screen " style={{ backgroundColor: color }}>
       {/* position */}
@@ -18,18 +22,14 @@ const BGColor = () => {
           <button
             className="outline-none px-4 py-1 bg-red-600 
           rounded-3xl text-white"
-            onClick={() => {
-              setColor("red");
-            }}
+            onClick={() => handleCLick("red")}
           >
             Red
           </button>
           <button
             className="outline-none px-4 py-1 bg-green-600 
           rounded-3xl text-white"
-            onClick={() => {
-              setColor("green");
-            }}
+            onClick={() => handleCLick("green")}
           >
             Green
           </button>
@@ -62,7 +62,8 @@ const BGColor = () => {
           </button>
           <button
             className="outline-none px-4 py-1 bg-pink-600 
-          rounded-3xl text-white"
+          rounded-3xl text-white transition duration-300 ease-in-out transform hover:scale-105 
+          active:bg-red-700 focus:outline-none"
             onClick={() => {
               setColor("pink");
             }}

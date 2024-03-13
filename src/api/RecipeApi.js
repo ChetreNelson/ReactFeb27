@@ -8,4 +8,8 @@ const API2 = axios.create({
   baseURL: "https://www.themealdb.com/api/json/v1/1/filter.php",
 });
 
-export  default { API, API2 };
+const API3 = axios.create({
+  baseURL :"https://www.themealdb.com/api/json/v1/1/lookup.php" 
+});
+
+export default { API, API2 , API3 };
